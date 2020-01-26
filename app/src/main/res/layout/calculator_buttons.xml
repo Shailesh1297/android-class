@@ -13,7 +13,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/calc_button"
             android:text="@string/but_mul"
+            android:textColor="#FCF9F9"
             android:textSize="30sp" />
 
         <Button
@@ -21,7 +23,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/calc_button"
             android:text="@string/but_div"
+            android:textColor="#F5F0F0"
             android:textSize="30sp" />
 
         <Button
@@ -29,7 +33,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/calc_button"
             android:text="@string/but_clear"
+            android:textColor="#F5F0F0"
             android:textSize="30sp" />
 
         <Button
@@ -37,7 +43,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/calc_button"
             android:text="@string/but_equal"
+            android:textColor="#F5F0F0"
             android:textSize="30sp" />
     </LinearLayout>
 
@@ -51,7 +59,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/calc_button"
             android:text="@string/but_sub"
+            android:textColor="#F5F0F0"
             android:textSize="30sp" />
 
         <Button
@@ -59,7 +69,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/calc_button"
             android:text="@string/but_7"
+            android:textColor="#F5F0F0"
             android:textSize="36sp" />
 
         <Button
@@ -67,7 +79,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/calc_button"
             android:text="@string/but_8"
+            android:textColor="#F5F0F0"
             android:textSize="36sp" />
 
         <Button
@@ -75,7 +89,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/calc_button"
             android:text="@string/but_9"
+            android:textColor="#F5F0F0"
             android:textSize="36sp" />
     </LinearLayout>
 
@@ -89,7 +105,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/calc_button"
             android:text="@string/but_add"
+            android:textColor="#F5F0F0"
             android:textSize="30sp" />
 
         <Button
@@ -97,7 +115,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/calc_button"
             android:text="@string/but_4"
+            android:textColor="#F5F0F0"
             android:textSize="36sp" />
 
         <Button
@@ -105,7 +125,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/calc_button"
             android:text="@string/but_5"
+            android:textColor="#F5F0F0"
             android:textSize="36sp" />
 
         <Button
@@ -114,7 +136,9 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
 
+            android:background="@drawable/calc_button"
             android:text="@string/but_6"
+            android:textColor="#F5F0F0"
             android:textSize="36sp" />
     </LinearLayout>
     <LinearLayout
@@ -127,7 +151,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/calc_button"
             android:text="@string/but_0"
+            android:textColor="#F5F0F0"
             android:textSize="36sp" />
 
         <Button
@@ -135,7 +161,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/calc_button"
             android:text="@string/but_1"
+            android:textColor="#F5F0F0"
             android:textSize="36sp" />
 
         <Button
@@ -143,7 +171,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/calc_button"
             android:text="@string/but_2"
+            android:textColor="#F5F0F0"
             android:textSize="36sp" />
 
         <Button
@@ -151,7 +181,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/calc_button"
             android:text="@string/but_3"
+            android:textColor="#F5F0F0"
             android:textSize="36sp" />
     </LinearLayout>
 
