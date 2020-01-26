@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Shailesh</string>
+    <string name="calculator">Calculator</string>
+    <string name="but_1">1</string>
+    <string name="but_2">2</string>
+    <string name="but_3">3</string>
+    <string name="but_4">4</string>
+    <string name="but_5">5</string>
+    <string name="but_6">6</string>
+    <string name="but_7">7</string>
+    <string name="but_8">8</string>
+    <string name="but_9">9</string>
+    <string name="but_0">0</string>
+    <string name="but_add">+</string>
+    <string name="but_sub">-</string>
+    <string name="but_mul">*</string>
+    <string name="but_div">/</string>
+    <string name="but_equal">=</string>
+    <string name="but_clear">c</string>
 </resources>
