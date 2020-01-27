@@ -31,23 +31,26 @@ public class Calculator extends AppCompatActivity implements View.OnClickListene
         setContentView(R.layout.activity_calculator);
         calcScreen=(TextView)findViewById(R.id.calcscreen);
         addButtons();
-        //setting font face
+
+        //setting font face digital
         Typeface tf=Typeface.createFromAsset(getAssets(),"fonts/digital-7.ttf");
         calcScreen.setTypeface(tf);
 
-        reset=true;
-        eqn=false;
-        operand="";
-        op=false;
+        reset=true;// when entered for first time
+        eqn=false; //when an operator is used
+        operand="";//display value
+        op=false; // which operator is used
 
        }
     @Override
     public void onClick(View v)
     {
+        //when 0 button is clicked
         if(b0==v)
         {
             if(reset){
                 calcScreen.setText("0");
+                operand+="0";
                 reset=false;
             }else {
                 operand=calcScreen.getText().toString();
@@ -55,12 +58,14 @@ public class Calculator extends AppCompatActivity implements View.OnClickListene
                 calcScreen.setText(operand);
             }
             op=false;
+        }
 
-
-        }else if(b1==v)
+        //when 1 button is clicked
+        if(b1==v)
         {
             if(reset) {
                 calcScreen.setText("1");
+                operand+="1";
                 reset=false;
             }else {
                 operand=calcScreen.getText().toString();
@@ -68,10 +73,14 @@ public class Calculator extends AppCompatActivity implements View.OnClickListene
                 calcScreen.setText(operand);
             }
             op=false;
-        }else if(b2==v)
+        }
+
+        //when 2 is clicked
+        if(b2==v)
         {
             if(reset) {
                 calcScreen.setText("2");
+                operand+="2";
                 reset=false;
             }else {
                 operand=calcScreen.getText().toString();
@@ -79,10 +88,14 @@ public class Calculator extends AppCompatActivity implements View.OnClickListene
                 calcScreen.setText(operand);
             }
             op=false;
-        }else if(b3==v)
+        }
+
+        //when 3 is clicked
+        if(b3==v)
         {
             if(reset){
                 calcScreen.setText("3");
+                operand+="3";
                 reset=false;
             }else {
                 operand=calcScreen.getText().toString();
@@ -90,10 +103,14 @@ public class Calculator extends AppCompatActivity implements View.OnClickListene
                 calcScreen.setText(operand);
             }
             op=false;
-        }else if(b4==v)
+        }
+
+        //when  4 is clicked
+        if(b4==v)
         {
             if(reset){
                 calcScreen.setText("4");
+                operand+="4";
                 reset=false;
             }else {
                operand=calcScreen.getText().toString();
@@ -101,10 +118,14 @@ public class Calculator extends AppCompatActivity implements View.OnClickListene
                 calcScreen.setText(operand);
             }
             op=false;
-        }else if(b5==v)
+        }
+
+        //when 5 is clicked
+        if(b5==v)
         {
             if(reset){
                 calcScreen.setText("5");
+                operand+="5";
                 reset=false;
             }else {
                 operand=calcScreen.getText().toString();
@@ -112,10 +133,15 @@ public class Calculator extends AppCompatActivity implements View.OnClickListene
                 calcScreen.setText(operand);
             }
             op=false;
-        }else if(b6==v)
+        }
+
+        //when 6 is clicked
+
+        if(b6==v)
         {
             if(reset){
                 calcScreen.setText("6");
+                operand+="6";
                 reset=false;
             }else{
                 operand=calcScreen.getText().toString();
@@ -123,10 +149,13 @@ public class Calculator extends AppCompatActivity implements View.OnClickListene
                 calcScreen.setText(operand);
             }
             op=false;
-        }else if(b7==v)
+        }
+ // when 7 is clicked
+        if(b7==v)
         {
             if(reset) {
                 calcScreen.setText("7");
+                operand+="7";
                 reset=false;
             }else {
                operand=calcScreen.getText().toString();
@@ -134,10 +163,13 @@ public class Calculator extends AppCompatActivity implements View.OnClickListene
                 calcScreen.setText(operand);
             }
             op=false;
-        }else if(b8==v)
+        }
+  // when 8 is clicked
+        if(b8==v)
         {
             if(reset){
                 calcScreen.setText("8");
+                operand+="8";
                 reset=false;
             }else{
                operand=calcScreen.getText().toString();
@@ -145,10 +177,13 @@ public class Calculator extends AppCompatActivity implements View.OnClickListene
                 calcScreen.setText(operand);
             }
             op=false;
-        }else if(b9==v)
+        }
+  //when 9 is clicked
+        if(b9==v)
         {
             if(reset){
                 calcScreen.setText("9");
+                operand+="9";
                 reset=false;
             }else {
                operand=calcScreen.getText().toString();
@@ -156,9 +191,38 @@ public class Calculator extends AppCompatActivity implements View.OnClickListene
                 calcScreen.setText(operand);
             }
             op=false;
-        }else if(add==v)
-        {
+        }
 
+        //addition is clicked
+        if(add==v)
+        {
+            if(!reset)
+            {
+                    if(eqn){
+
+                        if(!op)
+                            getResult();
+                        else
+                            operand=calcScreen.getText().toString().substring(0,calcScreen.getText().toString().length()-1);
+
+                    } else
+                    {
+                        eqn=true;
+                    }
+
+
+                operand+="+";
+                ao=1;
+                calcScreen.setText(operand);
+                op=true;
+            }
+        }
+
+//when subtraction operator is clicked
+        if(sub==v)
+        {
+            if(!reset)
+            {
             if(eqn){
 
                 if(!op)
@@ -171,86 +235,83 @@ public class Calculator extends AppCompatActivity implements View.OnClickListene
                 eqn=true;
             }
 
-            operand+="+";
-            ao=1;
-            calcScreen.setText(operand);
-            op=true;
-
-
-
-
-        }else if(sub==v)
-        {
-            if(eqn){
-
-                if(!op)
-                    getResult();
-                else
-                    operand=calcScreen.getText().toString().substring(0,calcScreen.getText().toString().length()-1);
-
-            } else
-            {
-                eqn=true;
+                operand+="-";
+                ao=2;
+                calcScreen.setText(operand);
+                op=true;
             }
-            operand+="-";
-            ao=2;
-            calcScreen.setText(operand);
-            op=true;
+        }
 
-        }else if(div==v)
+        //when division button is clicked
+        if(div==v)
         {
-            if(eqn){
+            if(!reset) {
+                if(eqn){
 
-                if(!op)
-                     getResult();
-                    else
-                        operand=calcScreen.getText().toString().substring(0,calcScreen.getText().toString().length()-1);
-                 } else
-                {
-                    eqn=true;
-                }
+                    if(!op)
+                         getResult();
+                        else
+                            operand=calcScreen.getText().toString().substring(0,calcScreen.getText().toString().length()-1);
+                     } else
+                    {
+                        eqn=true;
+                    }
 
-            operand+="/";
-            ao=3;
-            calcScreen.setText(operand);
-            op=true;
-        }else if(mul==v)
+                        operand += "/";
+                        ao = 3;
+                        calcScreen.setText(operand);
+                        op = true;
+                    }
+        }
+
+        //when multiplication is clicked
+        if(mul==v)
         {
-            if(eqn){
+            if(!reset) {
+                    if(eqn){
 
-                if(!op) {
-                    getResult();
+                        if(!op) {
+                            getResult();
 
-                }else
-                {
-                    operand=calcScreen.getText().toString().substring(0,calcScreen.getText().toString().length()-1);
-                }
+                        }else
+                        {
+                            operand=calcScreen.getText().toString().substring(0,calcScreen.getText().toString().length()-1);
+                        }
 
 
-            } else
-            {
-                eqn=true;
-            }
+                    } else
+                    {
+                        eqn=true;
+                    }
 
-            operand+="*";
-            ao=4;
-            calcScreen.setText(operand);
-            op=true;
-        }else if(clr==v)
+                  operand += "*";
+                  ao = 4;
+                  calcScreen.setText(operand);
+                  op = true;
+              }
+
+        }
+
+        //when clear is clicked
+        if(clr==v)
         {
-           calcScreen.setText("0");
+            operand="0";
+           calcScreen.setText(operand);
            ao=0;
            reset=true;
            eqn=false;
 
-        }else if(eql==v)
+        }
+//when equal is clicked
+        if(eql==v)
         {
-           if(eqn)
-           {
-               getResult();
-               calcScreen.setText(operand);
-               ao=0;
-           }
+                    if(!reset) {
+                        if (eqn && !op) {
+                            getResult();
+                            calcScreen.setText(operand);
+                            ao = 0;
+                        }
+                    }
         }
 
         Log.d("operand",operand);
