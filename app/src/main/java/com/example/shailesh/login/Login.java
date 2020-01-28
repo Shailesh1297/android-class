@@ -32,7 +32,6 @@ public class Login extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),""+sum(),Toast.LENGTH_LONG).show();
             }
         });
-
     }
 
     int sum()
