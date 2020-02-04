@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.shailesh.calculator.Calculator;
-import com.example.shailesh.login.Login;
+import com.example.shailesh.simplecalculator.SimpleCalculator;
 
 public class MainActivity extends AppCompatActivity {
    Button butCalc,butLog;
@@ -23,10 +23,11 @@ public class MainActivity extends AppCompatActivity {
 
         butCalc=(Button)findViewById(R.id.butCalc);
         butLog=findViewById(R.id.btnLogin);
+
         butLog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent calintent=new Intent(getBaseContext(), Login.class);
+                Intent calintent=new Intent(getBaseContext(), SimpleCalculator.class);
                 startActivity(calintent);
             }
         });
