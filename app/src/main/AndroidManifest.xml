@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".simplecalculator.SimpleCalculator"></activity>
+        <activity android:name=".registration.RegisterData"></activity>
+        <activity android:name=".simplecalculator.SimpleCalculator" />
         <activity android:name=".calculator.Calculator" />
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -18,6 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".registration.Registration" />
     </application>
 
 </manifest>

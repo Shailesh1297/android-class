@@ -9,10 +9,12 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.shailesh.calculator.Calculator;
+import com.example.shailesh.registration.Registration;
+
 import com.example.shailesh.simplecalculator.SimpleCalculator;
 
 public class MainActivity extends AppCompatActivity {
-   Button butCalc,butLog;
+   Button butCalc,butLog,butReg;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         butCalc=(Button)findViewById(R.id.butCalc);
         butLog=findViewById(R.id.btnLogin);
+        butReg=findViewById(R.id.reg);
 
         butLog.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +40,14 @@ public class MainActivity extends AppCompatActivity {
                 Intent calintent=new Intent(getBaseContext(),Calculator.class);
                 startActivity(calintent);
 
+            }
+        });
+
+        butReg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent calintent=new Intent(getBaseContext(), Registration.class);
+                startActivity(calintent);
             }
         });
     }
