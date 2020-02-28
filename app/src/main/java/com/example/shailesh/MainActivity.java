@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.example.shailesh.calculator.Calculator;
 
+import com.example.shailesh.intents.ImplicitIntent;
 import com.example.shailesh.simplecalculator.SimpleCalculator;
 
 public class MainActivity extends AppCompatActivity {
@@ -46,12 +47,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //Implicit Intent
+        //Explicit Intent
         butReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://www.google.com/"));
+                Intent intent=new Intent(getBaseContext(), ImplicitIntent.class);
+
                 startActivity(intent);
             }
         });
