@@ -14,17 +14,17 @@
         android:text="@string/calculator"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.463"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.418" />
+        app:layout_constraintVertical_bias="0.087" />
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
-        android:text="Button"
+        android:text="Simple Calculator"
         app:layout_constraintEnd_toEndOf="@+id/butCalc"
         app:layout_constraintStart_toStartOf="@+id/butCalc"
         app:layout_constraintTop_toBottomOf="@+id/butCalc" />
