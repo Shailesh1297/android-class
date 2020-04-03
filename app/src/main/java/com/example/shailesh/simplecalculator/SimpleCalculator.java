@@ -31,7 +31,7 @@ public class SimpleCalculator extends AppCompatActivity implements AdapterView.O
         addWidget();
 
         ArrayAdapter aa=new ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,operators);
-        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+     //   aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         op_spinner.setAdapter(aa);
         op_spinner.setOnItemSelectedListener(this);
 
