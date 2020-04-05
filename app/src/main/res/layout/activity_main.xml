@@ -1,43 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/register"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/butCalc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:text="@string/calculator"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.463"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.087" />
+        android:layout_weight="1"
+        />
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:text="Simple Calculator"
-        app:layout_constraintEnd_toEndOf="@+id/butCalc"
-        app:layout_constraintStart_toStartOf="@+id/butCalc"
-        app:layout_constraintTop_toBottomOf="@+id/butCalc" />
+        android:layout_weight="1"
+      />
 
     <Button
         android:id="@+id/reg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="163dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:text="ExplicitIntent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_weight="1"
+        />
+
+    <Button
+        android:id="@+id/content_provider_but"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="ContentProvider" />
+    <Button
+        android:id="@+id/broadcast_receiver_but"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="BroadcastReceiver" />
+    <Button
+        android:id="@+id/fragment_but"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="Fragment" />
+    <Button
+        android:id="@+id/sql_but"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="Database" />
+</LinearLayout>

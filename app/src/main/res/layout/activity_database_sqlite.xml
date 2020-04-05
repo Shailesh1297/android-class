@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".database.DatabaseSqlite">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="32sp"
+        android:text="SQLite DATABSE"/>
+   <EditText
+       android:id="@+id/data_name"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:inputType="textPersonName"
+       android:layout_margin="8dp"
+       android:hint="Name"/>
+    <EditText
+        android:id="@+id/data_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:layout_margin="8dp"
+        android:hint="Email"
+        />
+
+    <Button
+        android:id="@+id/insert_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="INSERT RECORD"/>
+    <Button
+        android:id="@+id/show_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="SHOW RECORD"/>
+</LinearLayout>
